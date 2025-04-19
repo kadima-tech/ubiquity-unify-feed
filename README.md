@@ -9,8 +9,22 @@ A Python web application that streams video feed from a Ubiquiti UniFi camera. T
 - Configurable update interval
 - Thread-safe frame handling
 - Authentication support for UniFi cameras
+- Docker support with multi-architecture builds (amd64, arm64)
 
-## Requirements
+## Quick Start with Docker
+
+```bash
+docker run -d \
+  -p 8000:8000 \
+  -e UNIFI_AUTH_COOKIE="your-auth-cookie-here" \
+  kadimatech/unifi-feed:latest
+```
+
+Then visit `http://localhost:8000` in your browser.
+
+## Manual Installation
+
+### Requirements
 
 - Python 3.x
 - Flask
@@ -18,7 +32,7 @@ A Python web application that streams video feed from a Ubiquiti UniFi camera. T
 - NumPy
 - Requests
 
-## Installation
+### Installation Steps
 
 1. Clone the repository:
 ```bash
@@ -51,9 +65,17 @@ $env:UNIFI_AUTH_COOKIE="your-auth-cookie-here"
 
 ## Usage
 
-Run the application:
+### Running Locally
+
 ```bash
 python web-stream.py
+```
+
+### Building Docker Image Locally
+
+```bash
+docker build -t unifi-feed .
+docker run -d -p 8000:8000 -e UNIFI_AUTH_COOKIE="your-auth-cookie-here" unifi-feed
 ```
 
 The web interface will be available at `http://localhost:8000`. To access from other devices on your network, use your computer's IP address instead of localhost.
