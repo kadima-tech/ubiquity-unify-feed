@@ -4,7 +4,7 @@ WORKDIR /app
 
 # Install system dependencies for OpenCV
 RUN apt-get update && apt-get install -y \
-    libgl1-mesa-glx \
+    libgl1 \
     libglib2.0-0 \
     && rm -rf /var/lib/apt/lists/*
 
@@ -15,8 +15,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy application code
 COPY web-stream.py .
 
-# Environment variable for auth (to be provided at runtime)
-ENV UNIFI_AUTH_COOKIE=""
+# Non-sensitive defaults (pass UNIFI_PASSWORD at runtime, not here)
+ENV UNIFI_BASE_URL="http://192.168.2.135"
+ENV UNIFI_USERNAME="ubnt"
 
 # Expose port
 EXPOSE 8000
