@@ -15,8 +15,10 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy application code
 COPY web-stream.py .
 
-# Environment variable for auth (to be provided at runtime)
-ENV UNIFI_AUTH_COOKIE=""
+# Credentials and controller URL (override at runtime)
+ENV UNIFI_BASE_URL="http://192.168.2.135"
+ENV UNIFI_USERNAME="ubnt"
+ENV UNIFI_PASSWORD="ubnt"
 
 # Expose port
 EXPOSE 8000
