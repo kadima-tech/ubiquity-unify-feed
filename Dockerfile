@@ -1,4 +1,5 @@
-FROM python:3.9-slim
+# CPython 3.15.0, released 2026-10-09.
+FROM python:3.15.0-slim
 
 WORKDIR /app
 
