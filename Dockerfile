@@ -1,5 +1,6 @@
-# CPython 3.15.0, released 2026-10-09.
-FROM python:3.15.0-slim
+# python:3.15.2-slim
+# CPython 3.15.2, tagged 2026-10-25 (includes CVE-2026-115557). Multi-arch index.
+FROM python:3.15.2-slim@sha256:65a65fc7b30b06cb6df4930fd4650697cb23f4c2698ab81fc87e4b031bc36928
 
 WORKDIR /app
 
