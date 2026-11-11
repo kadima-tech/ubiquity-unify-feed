@@ -4,7 +4,8 @@ numpy==2.5.4
 requests==2.34.2
 blinker==1.9.0
 # GHSA-6q48-6c7w-9gw2 is fixed in 2026.10.19 (released 2026-10-20).
-certifi==2026.10.19
+# 2026.10.23 (released 2026-10-23) is the newest stable CA bundle on or before 2026-11-04.
+certifi==2026.10.23
 charset-normalizer==3.5.2
 click==8.5.0
 idna==3.20
