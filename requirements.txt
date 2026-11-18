@@ -4,10 +4,11 @@ numpy==2.5.4
 requests==2.34.2
 blinker==1.9.0
 # GHSA-6q48-6c7w-9gw2 is fixed in 2026.10.19 (released 2026-10-20).
-# 2026.10.23 (released 2026-10-23) is the newest stable CA bundle on or before 2026-11-04.
+# 2026.10.23 (released 2026-10-23) is the newest stable CA bundle on or before 2026-11-11.
+# It removes emSign Root CA - C1 and emSign ECC Root CA - C3.
 certifi==2026.10.23
 charset-normalizer==3.5.2
-click==8.5.0
+click==8.5.1
 idna==3.20
 itsdangerous==2.2.0
 jinja2==3.1.6
